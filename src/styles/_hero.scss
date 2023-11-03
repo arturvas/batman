@@ -1,0 +1,81 @@
+@use "variaveis" as *;
+
+.hero {
+  padding: 7vw;
+  min-height: 80vw;
+  background-image: url(../images/hero_desktop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &__content {
+    max-width: 640px;
+
+    &__branding {
+      &__titulo {
+        @include titulo();
+
+        &--big {
+          @include titulo(72px);
+        }
+      }
+    }
+
+    &__genero {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 32px;
+      padding-top: 36px;
+      padding-bottom: 38px;
+
+      &__capslock {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $corEscuro40;
+      }
+    }
+
+    &__descricao {
+      display: flex;
+      width: 604px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      &__subtitulo {
+        @include texto(18px, 700);
+
+        &--big {
+          @include texto(28px, 700);
+        }
+
+        &--normal {
+          @include texto();
+
+          a {
+            @include texto(16px, 700);
+          }
+        }
+      }
+    }
+
+    &__btn {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      display: flex;
+      width: 286px;
+      height: 56px;
+      padding: 12px 68px;
+      margin: 55px 0;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 8px;
+      border-style: none;
+      background-color: $corSecundaria;
+    }
+  }
+}
