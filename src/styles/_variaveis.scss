@@ -57,3 +57,12 @@ $fontFamily: Space Grotesk;
   font-weight: $fontWeight;
   color: $corPrimaria;
 }
+
+@mixin imagemCard($url) {
+  width: 140px;
+  height: 200px;
+  flex-shrink: 0;
+  background: url($url);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
