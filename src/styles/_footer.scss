@@ -1,0 +1,50 @@
+@use "variaveis" as *;
+
+.footer {
+  padding: 0 5.5vw 36px;
+
+  img {
+    filter: $corEscuro50SVG;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    width: 24px;
+
+    &:nth-child(2) {
+      margin: 0 12px;
+    }
+  }
+
+  &__texto {
+    @include texto(10px, 400);
+    display: flex;
+    align-items: center;
+    line-height: 12px;
+    text-align: center;
+    color: $corEscuro50;
+  }
+
+  &__social {
+    display: flex;
+    margin-left: auto;
+
+    &__logo {
+      width: 24px;
+
+      &:nth-child(2) {
+        margin: 0 32px;
+      }
+    }
+  }
+}
