@@ -1,11 +1,17 @@
 @use "variaveis" as *;
 
 .hero {
-  padding: 7vw;
-  min-height: 60vw;
+  padding: 7vw 5.5vw;
+  min-height: 65vw;
   background-image: url(../images/hero_desktop.png);
   background-size: contain;
   background-repeat: no-repeat;
+
+  &__container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
   &__content {
     max-width: 640px;
