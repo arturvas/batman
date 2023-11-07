@@ -79,4 +79,114 @@
       background-color: $corSecundaria;
     }
   }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+
+    &__movie {
+      display: flex;
+      width: 392px;
+      height: 202px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      border: 1px solid $corEscuro80;
+      background: $corFundo;
+      overflow: hidden;
+
+      &--begins {
+        @include imagemCard("/dist/images/card/Begins.png");
+      }
+
+      &--darkKnight {
+        @include imagemCard("/dist/images/card/TheDarkKnight.png");
+      }
+
+      &--darkKnightRise {
+        @include imagemCard("/dist/images/card/TheDarkKnightRises.png");
+      }
+
+      &__texts {
+        width: 220px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin: 14px 16px;
+
+        &__genero {
+          display: inline-flex;
+          align-items: flex-start;
+          gap: 12px;
+          // padding-top: 16px;
+
+          &__capslock {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $corEscuro50;
+          }
+        }
+
+        &__titulo {
+          @include texto(18px, 700);
+        }
+
+        &__imdb {
+          display: flex;
+          align-items: flex-start;
+          gap: 4px;
+
+          p {
+            @include titulo(14px, 400);
+          }
+
+          p:last-child {
+            font-weight: 700;
+            color: $corSecundaria;
+          }
+        }
+
+        &__descricao {
+          @include texto(12px, 400);
+          line-height: 16px;
+          color: $corEscuro50;
+          width: 220px;
+        }
+      }
+
+      &__buttons {
+        width: 220px;
+        max-width: 96%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3px;
+
+        button {
+          width: 100px;
+          height: 26px;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+
+        &__assistir {
+          @include titulo(12px);
+          background-color: $corSecundaria;
+          color: $corFundo;
+          border-style: none;
+        }
+
+        &__detalhes {
+          @include titulo(12px, 400);
+          border: 1px solid $corEscuro40;
+          color: $corEscuro40;
+          background-color: $corFundo;
+        }
+      }
+    }
+  }
 }
