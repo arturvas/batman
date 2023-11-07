@@ -12,6 +12,36 @@ $corPrimaria: #ffffff;
 $corSecundaria: #fdff00;
 
 // Fontes
+@font-face {
+  font-family: Space Grotesk;
+  src: url(../../assets/fonts/SpaceGrotesk-Light.woff2);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Space Grotesk;
+  src: url(../../assets/fonts/SpaceGrotesk-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Space Grotesk;
+  src: url(../../assets/fonts/SpaceGrotesk-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Space Grotesk;
+  src: url(../../assets/fonts/SpaceGrotesk-SemiBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Space Grotesk;
+  src: url(../../assets/fonts/SpaceGrotesk-Bold.woff2);
+  font-weight: 700;
+}
+
 $fontFamily: Space Grotesk;
 
 @mixin texto($fontSize: 16px, $fontWeight: 400) {
