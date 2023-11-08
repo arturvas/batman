@@ -59,11 +59,12 @@ body {
     border-style: none;
     background-color: $corSecundaria;
     transition: transform 0.2s;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.2s;
 
     &:hover {
       transform: scale(1.05);
-      box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.7);
     }
   }
 
