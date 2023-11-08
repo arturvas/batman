@@ -1,6 +1,7 @@
 @use "variaveis" as *;
 @use "hero" as *;
 @use "footer" as *;
+@use "header" as *;
 
 * {
   margin: 0;
@@ -17,11 +18,99 @@ body {
   }
 }
 
-.texto {
-  @include texto(18px, 400);
+.btn {
+  cursor: pointer;
 
-  &--small {
-    @include texto(10px);
-    line-height: 12px;
+  &--big {
+    text-decoration: none;
+    @include titulo(24px, 600);
+    color: $corFundo;
+    display: flex;
+    width: 286px;
+    height: 56px;
+    padding: 12px 0;
+    margin: 55px 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border-style: none;
+    background-color: $corSecundaria;
+    transition: transform 0.2s;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &--header {
+    text-decoration: none;
+    @include texto(18px, 700);
+    color: $corFundo;
+    display: flex;
+    // width: auto;
+    padding: 20px;
+    height: 40px;
+    padding: 6px 34px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border-style: none;
+    background-color: $corSecundaria;
+    transition: transform 0.2s;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &--small-primary {
+    @include titulo(12px, 400);
+    display: flex;
+    max-width: 100px;
+    width: 96%;
+    height: 26px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid $corSecundaria;
+    color: $corSecundaria;
+    background-color: $corFundo;
+    transition: transform 0.2s;
+
+    &:hover {
+      color: $corFundo;
+      background-color: $corSecundaria;
+      transform: scale(1.05);
+      font-weight: 700;
+    }
+  }
+
+  &--small-secondary {
+    @include titulo(12px, 400);
+    display: flex;
+    max-width: 100px;
+    width: 96%;
+    height: 26px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid $corEscuro40;
+    color: $corEscuro40;
+    background-color: $corFundo;
+    transition: transform 0.2s;
+
+    &:hover {
+      border: 1px solid $corPrimaria;
+      color: $corFundo;
+      background-color: $corPrimaria;
+      transform: scale(1.05);
+      font-weight: 700;
+    }
   }
 }
