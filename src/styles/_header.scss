@@ -1,0 +1,47 @@
+@use "variaveis" as *;
+
+.header {
+  &__container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 86px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__links {
+    // display: flex;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 26px;
+    @include texto(18px, 500);
+
+    &__item {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+      color: $corPrimaria;
+
+      &__link {
+        @include texto(18px, 500);
+        text-decoration: none;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.05);
+          color: $corSecundaria;
+        }
+      }
+    }
+  }
+}
