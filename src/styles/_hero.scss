@@ -66,32 +66,8 @@
         }
       }
     }
-
-    &__btn {
-      cursor: pointer;
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 32px;
-      display: flex;
-      width: 286px;
-      height: 56px;
-      padding: 12px 0;
-      margin: 55px 0;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-      border-radius: 8px;
-      border-style: none;
-      background-color: $corSecundaria;
-      transition: transform 0.2s;
-      box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
-
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
-      }
-    }
   }
+
   &__cards {
     display: flex;
     justify-content: space-between;
@@ -183,50 +159,7 @@
         max-width: 220;
         display: flex;
         justify-content: space-between;
-        padding-top: 3px;
-
-        button {
-          width: 100px;
-          height: 26px;
-          justify-content: center;
-          align-items: center;
-          flex-shrink: 0;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: transform 0.2s;
-
-          // &:hover {
-          //   transform: scale(1.05);
-          // }
-        }
-
-        &__assistir {
-          @include titulo(12px, 400);
-          border: 1px solid $corSecundaria;
-          color: $corSecundaria;
-          background-color: $corFundo;
-
-          &:hover {
-            color: $corFundo;
-            background-color: $corSecundaria;
-            transform: scale(1.05);
-            font-weight: 700;
-          }
-        }
-
-        &__detalhes {
-          @include titulo(12px, 400);
-          border: 1px solid $corEscuro40;
-          color: $corEscuro40;
-          background-color: $corFundo;
-
-          &:hover {
-            color: $corFundo;
-            background-color: $corPrimaria;
-            transform: scale(1.05);
-            font-weight: 700;
-          }
-        }
+        padding-top: 5px;
       }
     }
   }
