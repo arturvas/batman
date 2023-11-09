@@ -29,6 +29,11 @@
     padding: 8px 0;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      max-width: 90vw;
+      height: 20vw;
+    }
   }
 
   &__logo {
@@ -47,6 +52,12 @@
     align-items: center;
     gap: 26px;
     @include texto(18px, 500);
+
+    @media (max-width: 768px) {
+      :not(:nth-last-child(1)) {
+        display: none;
+      }
+    }
 
     &__item {
       display: flex;

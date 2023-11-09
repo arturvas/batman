@@ -66,4 +66,8 @@ $fontFamily: Space Grotesk;
   background: url($url);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    width: 30vw;
+  }
 }

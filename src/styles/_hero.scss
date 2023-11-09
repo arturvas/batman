@@ -7,6 +7,12 @@
   background-size: contain;
   background-repeat: no-repeat;
 
+  @media (max-width: 768px) {
+    background-size: cover;
+    background-position: 10% 50%;
+    overflow: hidden;
+  }
+
   &__container {
     max-width: 1280px;
     width: 100%;
@@ -20,8 +26,16 @@
       &__titulo {
         @include titulo();
 
+        @media (max-width: 768px) {
+          @include titulo(18px);
+        }
+
         &--big {
           @include titulo(72px);
+
+          @media (max-width: 768px) {
+            @include titulo(38px);
+          }
         }
       }
     }
@@ -33,6 +47,10 @@
       padding-top: 36px;
       padding-bottom: 38px;
 
+      @media (max-width: 768px) {
+        padding: 4vh 0;
+      }
+
       &__capslock {
         font-size: 14px;
         font-weight: 700;
@@ -40,6 +58,10 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         color: $corEscuro40;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
       }
     }
 
@@ -50,8 +72,17 @@
       align-items: flex-start;
       gap: 16px;
 
+      @media (max-width: 768px) {
+        // width: 100%;
+        max-width: 89vw;
+      }
+
       &__subtitulo {
         @include texto(18px, 700);
+
+        @media (max-width: 768px) {
+          @include texto(16px, 700);
+        }
 
         &--big {
           @include texto(28px, 700);
@@ -59,6 +90,10 @@
 
         &--normal {
           @include texto();
+
+          @media (max-width: 768px) {
+            @include texto(16px);
+          }
 
           a {
             @include texto(16px, 700);
@@ -69,15 +104,22 @@
   }
 
   &__cards {
-    display: flex;
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 10vw;
+    }
 
     &__movie {
       display: flex;
-      max-width: 392px;
-      width: 100%;
-      max-height: 202px;
-      height: 100%;
+      max-width: 392px; //editar
+      width: 100%; //editar
+      max-height: 202px; //editar
+      height: 100%; //editar
       flex-shrink: 0;
       border-radius: 8px;
       border: 1px solid $corEscuro80;
@@ -89,6 +131,11 @@
       &:hover {
         transform: scale(1.05);
         box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
+      }
+
+      @media (max-width: 768px) {
+        width: 90vw;
+        height: 50vw;
       }
 
       &--begins {
@@ -111,11 +158,22 @@
         gap: 8px;
         margin: 14px 16px;
 
+        @media (max-width: 768px) {
+          width: 52vw;
+        }
+
         &__genero {
           display: inline-flex;
           align-items: flex-start;
           gap: 12px;
-          // padding-top: 16px;
+
+          @media (max-width: 768px) {
+            width: 52vw;
+            // column-gap: 12px;
+            li:last-child {
+              overflow: hidden;
+            }
+          }
 
           &__capslock {
             font-size: 12px;
@@ -124,11 +182,19 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             color: $corEscuro50;
+
+            @media (max-width: 768px) {
+              // overflow: hidden;
+            }
           }
         }
 
         &__titulo {
           @include texto(18px, 700);
+
+          @media (max-width: 768px) {
+            line-height: 12px;
+          }
         }
 
         &__imdb {
@@ -151,6 +217,11 @@
           line-height: 16px;
           color: $corEscuro50;
           width: 220px;
+
+          @media (max-width: 768px) {
+            max-width: 52vw;
+            overflow: hidden;
+          }
         }
       }
 
