@@ -68,9 +68,13 @@
   // logo distribuidora
   &__logo {
     @media (max-width: 768px) {
-      width: 21vw;
+      max-width: 74px;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+
+      :nth-child(1) {
+        padding-right: 26px;
+      }
     }
   }
 }
